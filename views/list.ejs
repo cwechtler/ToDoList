@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <title>ToDo List</title>
 </head>
 <body>
     <h1><%= dayOfWeek %></h1>
+
+    <ul>
+        <% for(let i = 0; i < newListItems.length; i++){ %>
+            <li><%= newListItems[i] %></li>
+        <% } %>
+    </ul>
+
+    <form action="/" method="post">
+    <label for="newListItem">Add New ToDo</label>
+    <input type="text" name="newListItem">
+    <button type="submit">Add</button>
+    </form>
+
 </body>
 </html>
