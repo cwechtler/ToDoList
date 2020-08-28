@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
-    <link rel="stylesheet" href="css/styles.css">
-
-</head>
-
-<body>
+<%- include("header"); -%>
     <div id="heading" class="box">
-        <h1><%= dayOfWeek %></h1>
+        <h1><%= listTitle %></h1>
+
     </div>
+    <form action=<%= buttonAction %> method="post">
+        <button class="button" type="submit" name="button"><%= buttonTitle %></button>
+    </form>
 
     <div class="box">
         <% for(let i = 0; i < newListItems.length; i++){ %>
@@ -24,14 +18,7 @@
 
         <form class="item" action="/" method="post">
             <input type="text" name="newListItem" placeholder="New Item" autocomplete="off">
-            <button type="submit">+</button>
+            <button class="list-button" type="submit" name="list" value=<%= listTitle %>>+</button>
         </form>
     </div>
-
-</body>
-
-<footer>
-    <p>&#169; Homeville, 2020</p>
-</footer>
-
-</html>
+    <%- include("footer"); -%>
