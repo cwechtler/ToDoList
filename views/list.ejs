@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
-    <h1><%= dayOfWeek %></h1>
+    <div id="heading" class="box">
+        <h1><%= dayOfWeek %></h1>
+    </div>
 
-    <ul>
+    <div class="box">
         <% for(let i = 0; i < newListItems.length; i++){ %>
-            <li><%= newListItems[i] %></li>
+        <div class="item">
+            <input type="checkbox">
+            <p><%= newListItems[i] %></p>
+        </div>
         <% } %>
-    </ul>
 
-    <form action="/" method="post">
-    <label for="newListItem">Add New ToDo</label>
-    <input type="text" name="newListItem">
-    <button type="submit">Add</button>
-    </form>
+        <form class="item" action="/" method="post">
+            <input type="text" name="newListItem" placeholder="New Item" autocomplete="off">
+            <button type="submit">+</button>
+        </form>
+    </div>
 
 </body>
+
+<footer>
+    <p>&#169; Homeville, 2020</p>
+</footer>
+
 </html>
