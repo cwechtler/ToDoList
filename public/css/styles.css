@@ -69,6 +69,13 @@ form.item, form.select-button {
   margin-bottom: 40px;
   padding-bottom: 6px;
   border-color: rgb(180, 180, 180);
+ 
+}
+
+.button:hover, .new-item-button:hover {
+  background-color: #584577;
+  color: white;
+  transition-duration: 0.5s;
 }
 
 .list-button {
@@ -97,6 +104,12 @@ form.item, form.select-button {
   font-size: 15px;
   margin-left: 6px;
   border-width: 0;
+}
+
+.delete-button:hover {
+  background-color: #630000;
+  color: white;
+  transition-duration: 0.5s;
 }
 
 input[type="text"] {

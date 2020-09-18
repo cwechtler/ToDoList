@@ -21,7 +21,8 @@
 
     <form class="item" action="/" method="post">
         <input type="text" name="newListItem" placeholder="New Item" autocomplete="off">
-        <button class="list-button" type="submit" name="list" value=<%= listTitle %>>+</button>
+        <button class="new-item-button" type="submit" name="list" value=<%= listTitle %>>+</button>
+        <input type="hidden" name="listName" value="<%= listTitle %>"></input>
     </form>
 </div>
 <%- include("footer"); -%>
